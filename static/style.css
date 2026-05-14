@@ -1,0 +1,7 @@
+body { background: #f8f9fa; }
+.table td, .table th { vertical-align: middle; }
+.btn-icon { padding: 0.15rem 0.4rem; font-size: 0.8rem; }
+.editing-row td { background: #fffde7; }
+.matrix-col-header { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; padding: 8px 2px; vertical-align: bottom; font-weight: normal; font-size: 0.75rem; }
+.matrix-diag { background: #dee2e6; }
+.matrix-cell { text-align: center; font-size: 0.8rem; min-width: 2rem; }
