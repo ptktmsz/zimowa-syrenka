@@ -12,12 +12,24 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="">⚽ Zimowa Syrenka</a>
+      <a class="navbar-brand fw-bold" href="index.html">⚽ Zimowa Syrenka</a>
       <div class="navbar-nav flex-row align-items-center gap-3">
-        <a class="nav-link" href="">Start</a>
-        <a class="nav-link" href="stats">Statystyki</a>
-        <a class="nav-link" href="finances">Finanse</a>
-        <a class="nav-link" href="games">Mecze</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Statystyki</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="stats.html#sub-stats-all">Statystyki indywidualne</a></li>
+            <li><a class="dropdown-item" href="stats.html#sub-matrix-all">Razem na boisku</a></li>
+          </ul>
+        </div>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Finanse</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="finances.html#sub-salda-all">Salda</a></li>
+            <li><a class="dropdown-item" href="finances.html#sub-platnosci-all">Płatności</a></li>
+            <li><a class="dropdown-item" href="finances.html#sub-wydatki-all">Wydatki</a></li>
+          </ul>
+        </div>
+        <a class="nav-link" href="games.html">Mecze</a>
       </div>
     </div>
   </nav>
@@ -54,6 +66,7 @@
   
   
   
+  
   <div class="tab-pane fade show active"
        id="fin-pane-all"
        role="tabpanel">
@@ -77,25 +90,9 @@
 
       
       <div class="tab-pane fade show active" id="sub-salda-all" role="tabpanel">
-        <div class="row g-3 mb-4">
+        <div class="row g-3 mb-4 flex-wrap">
           <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Wynajem</div>
-                <div class="fs-5 fw-bold">5763.26 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Inne wydatki</div>
-                <div class="fs-5 fw-bold">6080.70 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
+            <div class="card text-center" style="min-width:140px">
               <div class="card-body py-2">
                 <div class="text-muted small">Zebrano</div>
                 <div class="fs-5 fw-bold">5955.00 PLN</div>
@@ -103,11 +100,37 @@
             </div>
           </div>
           <div class="col-auto">
-            <div class="card text-center border-2 border-danger" style="min-width:160px">
+            <div class="card text-center" style="min-width:160px">
               <div class="card-body py-2">
-                <div class="text-muted small">Bilans</div>
+                <div class="text-muted small">Wydatki rzeczywiste</div>
+                <div class="fs-5 fw-bold">6080.70 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans kasowy</div>
                 <div class="fs-5 fw-bold text-danger">
-                  -5888.96 PLN
+                  -125.70 PLN
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Koszty bieżące</div>
+                <div class="fs-5 fw-bold">5471.83 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-success" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans budżetu</div>
+                <div class="fs-5 fw-bold text-success">
+                  +483.17 PLN
                 </div>
               </div>
             </div>
@@ -401,6 +424,7 @@
   
   
   
+  
   <div class="tab-pane fade "
        id="fin-pane-s1"
        role="tabpanel">
@@ -424,25 +448,9 @@
 
       
       <div class="tab-pane fade show active" id="sub-salda-s1" role="tabpanel">
-        <div class="row g-3 mb-4">
+        <div class="row g-3 mb-4 flex-wrap">
           <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Wynajem</div>
-                <div class="fs-5 fw-bold">3632.25 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Inne wydatki</div>
-                <div class="fs-5 fw-bold">3640.29 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
+            <div class="card text-center" style="min-width:140px">
               <div class="card-body py-2">
                 <div class="text-muted small">Zebrano</div>
                 <div class="fs-5 fw-bold">4185.00 PLN</div>
@@ -450,11 +458,37 @@
             </div>
           </div>
           <div class="col-auto">
-            <div class="card text-center border-2 border-danger" style="min-width:160px">
+            <div class="card text-center" style="min-width:160px">
               <div class="card-body py-2">
-                <div class="text-muted small">Bilans</div>
-                <div class="fs-5 fw-bold text-danger">
-                  -3087.54 PLN
+                <div class="text-muted small">Wydatki rzeczywiste</div>
+                <div class="fs-5 fw-bold">3640.29 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-success" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans kasowy</div>
+                <div class="fs-5 fw-bold text-success">
+                  +544.71 PLN
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Koszty bieżące</div>
+                <div class="fs-5 fw-bold">3640.25 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-success" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans budżetu</div>
+                <div class="fs-5 fw-bold text-success">
+                  +544.75 PLN
                 </div>
               </div>
             </div>
@@ -636,6 +670,7 @@
   
   
   
+  
   <div class="tab-pane fade "
        id="fin-pane-s2"
        role="tabpanel">
@@ -659,25 +694,9 @@
 
       
       <div class="tab-pane fade show active" id="sub-salda-s2" role="tabpanel">
-        <div class="row g-3 mb-4">
+        <div class="row g-3 mb-4 flex-wrap">
           <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Wynajem</div>
-                <div class="fs-5 fw-bold">2131.01 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
-              <div class="card-body py-2">
-                <div class="text-muted small">Inne wydatki</div>
-                <div class="fs-5 fw-bold">2440.41 PLN</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="card text-center" style="min-width:160px">
+            <div class="card text-center" style="min-width:140px">
               <div class="card-body py-2">
                 <div class="text-muted small">Zebrano</div>
                 <div class="fs-5 fw-bold">1770.00 PLN</div>
@@ -685,11 +704,37 @@
             </div>
           </div>
           <div class="col-auto">
-            <div class="card text-center border-2 border-danger" style="min-width:160px">
+            <div class="card text-center" style="min-width:160px">
               <div class="card-body py-2">
-                <div class="text-muted small">Bilans</div>
+                <div class="text-muted small">Wydatki rzeczywiste</div>
+                <div class="fs-5 fw-bold">2440.41 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans kasowy</div>
                 <div class="fs-5 fw-bold text-danger">
-                  -2801.42 PLN
+                  -670.41 PLN
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Koszty bieżące</div>
+                <div class="fs-5 fw-bold">1831.58 PLN</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:140px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans budżetu</div>
+                <div class="fs-5 fw-bold text-danger">
+                  -61.58 PLN
                 </div>
               </div>
             </div>
@@ -837,6 +882,14 @@
   </div>
   
 </div>
+<script>
+(function(){
+  const hash = location.hash;
+  if (!hash) return;
+  const trigger = document.querySelector('[data-bs-target="' + hash + '"]');
+  if (trigger) new bootstrap.Tab(trigger).show();
+})();
+</script>
 
   </div>
   <footer class="container-fluid px-4 py-3 mt-5 border-top text-muted small">
