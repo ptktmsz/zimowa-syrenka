@@ -57,247 +57,345 @@
        id="fin-pane-all"
        role="tabpanel">
 
-    <div class="row g-3 mb-4">
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Wynajem</div>
-            <div class="fs-5 fw-bold">5484.40 PLN</div>
+    <ul class="nav nav-pills mb-3" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="pill"
+                data-bs-target="#sub-salda-all" type="button">Salda</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-platnosci-all" type="button">Płatności</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-wydatki-all" type="button">Wydatki</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      
+      <div class="tab-pane fade show active" id="sub-salda-all" role="tabpanel">
+        <div class="row g-3 mb-4">
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Wynajem</div>
+                <div class="fs-5 fw-bold">5763.26 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Inne wydatki</div>
-            <div class="fs-5 fw-bold">8.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Inne wydatki</div>
+                <div class="fs-5 fw-bold">6080.70 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Zebrano</div>
-            <div class="fs-5 fw-bold">5610.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Zebrano</div>
+                <div class="fs-5 fw-bold">5955.00 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center border-2 border-success" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Bilans</div>
-            <div class="fs-5 fw-bold text-success">
-              +117.60 PLN
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans</div>
+                <div class="fs-5 fw-bold text-danger">
+                  -5888.96 PLN
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      
+      <div class="tab-pane fade" id="sub-platnosci-all" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:680px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
+          </thead>
+          <tbody>
+            
+            
+            <tr>
+              <td>
+                <a href="games/16" class="text-decoration-none">2026/05/24</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">0</td>
+              <td>304.43</td>
+              <td>0</td>
+              <td class="fw-semibold text-danger">-304.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/15" class="text-decoration-none">2026/05/17</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>265</td>
+              <td class="fw-semibold text-danger">-39.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/14" class="text-decoration-none">2026/05/10</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">14</td>
+              <td>304.43</td>
+              <td>280</td>
+              <td class="fw-semibold text-danger">-24.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/13" class="text-decoration-none">2026/05/03</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">16</td>
+              <td>304.43</td>
+              <td>320</td>
+              <td class="fw-semibold text-success">+15.57</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/11" class="text-decoration-none">2026/04/26</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>300</td>
+              <td class="fw-semibold text-danger">-4.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/10" class="text-decoration-none">2026/04/19</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>300</td>
+              <td class="fw-semibold text-danger">-4.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/9" class="text-decoration-none">2026/04/12</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>305</td>
+              <td class="fw-semibold text-success">+0.57</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/8" class="text-decoration-none">2026/03/08</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">14</td>
+              <td>442.50</td>
+              <td>420</td>
+              <td class="fw-semibold text-danger">-22.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/7" class="text-decoration-none">2026/03/01</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>480</td>
+              <td class="fw-semibold text-success">+37.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/6" class="text-decoration-none">2026/02/22</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>485</td>
+              <td class="fw-semibold text-success">+42.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/5" class="text-decoration-none">2026/02/15</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/4" class="text-decoration-none">2026/02/08</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/3" class="text-decoration-none">2026/02/01</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr class="text-muted">
+              <td>
+                <a href="games/12" class="text-decoration-none">2026/01/25</a>
+                <span class="badge bg-secondary ms-1">Anulowany</span>
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">—</td>
+              <td>92.25</td>
+              <td>0</td>
+              <td class="fw-semibold text-danger">-92.25</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/2" class="text-decoration-none">2026/01/18</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/1" class="text-decoration-none">2026/01/11</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+      
+      <div class="tab-pane fade" id="sub-wydatki-all" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:560px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Opis</th><th>Kwota</th><th>Sezon</th></tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>2026/05/15</td>
+              <td>boisko - AWF</td>
+              <td>913.28 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/04/10</td>
+              <td>przelew Elixir</td>
+              <td>5.00 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/04/10</td>
+              <td>boisko - AWF</td>
+              <td>1522.13 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/03/18</td>
+              <td>boisko - Syrenka</td>
+              <td>885.01 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/03/08</td>
+              <td>czekolada dla króla strzelców</td>
+              <td>8.00 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/02/23</td>
+              <td>boisko - Syrenka</td>
+              <td>1770.02 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/01/28</td>
+              <td>boisko - Syrenka</td>
+              <td>977.26 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
     </div>
-
-    <table class="table table-sm table-bordered bg-white" style="max-width:680px">
-      <thead class="table-dark">
-        <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
-      </thead>
-      <tbody>
-        
-        
-        <tr>
-          <td>
-            <a href="games/15" class="text-decoration-none">2026/05/17</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">0</td>
-          <td>330.00</td>
-          <td>0</td>
-          <td class="fw-semibold text-danger">-330.00</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/14" class="text-decoration-none">2026/05/10</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">14</td>
-          <td>304.43</td>
-          <td>200</td>
-          <td class="fw-semibold text-danger">-104.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/13" class="text-decoration-none">2026/05/03</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">16</td>
-          <td>304.43</td>
-          <td>320</td>
-          <td class="fw-semibold text-success">+15.57</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/11" class="text-decoration-none">2026/04/26</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>300</td>
-          <td class="fw-semibold text-danger">-4.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/10" class="text-decoration-none">2026/04/19</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>300</td>
-          <td class="fw-semibold text-danger">-4.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/9" class="text-decoration-none">2026/04/12</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>305</td>
-          <td class="fw-semibold text-success">+0.57</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/8" class="text-decoration-none">2026/03/08</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">14</td>
-          <td>442.50</td>
-          <td>420</td>
-          <td class="fw-semibold text-danger">-22.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/7" class="text-decoration-none">2026/03/01</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>480</td>
-          <td class="fw-semibold text-success">+37.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/6" class="text-decoration-none">2026/02/22</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>485</td>
-          <td class="fw-semibold text-success">+42.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/5" class="text-decoration-none">2026/02/15</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/4" class="text-decoration-none">2026/02/08</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/3" class="text-decoration-none">2026/02/01</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr class="text-muted">
-          <td>
-            <a href="games/12" class="text-decoration-none">2026/01/25</a>
-            <span class="badge bg-secondary ms-1">Anulowany</span>
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">—</td>
-          <td>92.25</td>
-          <td>0</td>
-          <td class="fw-semibold text-danger">-92.25</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/2" class="text-decoration-none">2026/01/18</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/1" class="text-decoration-none">2026/01/11</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-      </tbody>
-    </table>
-
   </div>
   
   
@@ -306,169 +404,233 @@
        id="fin-pane-s1"
        role="tabpanel">
 
-    <div class="row g-3 mb-4">
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Wynajem</div>
-            <div class="fs-5 fw-bold">3632.25 PLN</div>
+    <ul class="nav nav-pills mb-3" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="pill"
+                data-bs-target="#sub-salda-s1" type="button">Salda</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-platnosci-s1" type="button">Płatności</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-wydatki-s1" type="button">Wydatki</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      
+      <div class="tab-pane fade show active" id="sub-salda-s1" role="tabpanel">
+        <div class="row g-3 mb-4">
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Wynajem</div>
+                <div class="fs-5 fw-bold">3632.25 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Inne wydatki</div>
-            <div class="fs-5 fw-bold">8.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Inne wydatki</div>
+                <div class="fs-5 fw-bold">3640.29 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Zebrano</div>
-            <div class="fs-5 fw-bold">4185.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Zebrano</div>
+                <div class="fs-5 fw-bold">4185.00 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center border-2 border-success" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Bilans</div>
-            <div class="fs-5 fw-bold text-success">
-              +544.75 PLN
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans</div>
+                <div class="fs-5 fw-bold text-danger">
+                  -3087.54 PLN
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      
+      <div class="tab-pane fade" id="sub-platnosci-s1" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:680px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
+          </thead>
+          <tbody>
+            
+            
+            <tr>
+              <td>
+                <a href="games/8" class="text-decoration-none">2026/03/08</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">14</td>
+              <td>442.50</td>
+              <td>420</td>
+              <td class="fw-semibold text-danger">-22.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/7" class="text-decoration-none">2026/03/01</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>480</td>
+              <td class="fw-semibold text-success">+37.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/6" class="text-decoration-none">2026/02/22</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>485</td>
+              <td class="fw-semibold text-success">+42.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/5" class="text-decoration-none">2026/02/15</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/4" class="text-decoration-none">2026/02/08</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/3" class="text-decoration-none">2026/02/01</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr class="text-muted">
+              <td>
+                <a href="games/12" class="text-decoration-none">2026/01/25</a>
+                <span class="badge bg-secondary ms-1">Anulowany</span>
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">—</td>
+              <td>92.25</td>
+              <td>0</td>
+              <td class="fw-semibold text-danger">-92.25</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/2" class="text-decoration-none">2026/01/18</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/1" class="text-decoration-none">2026/01/11</a>
+                
+              </td>
+              <td class="text-muted small">Zima 2026</td>
+              <td class="text-muted">16</td>
+              <td>442.50</td>
+              <td>560</td>
+              <td class="fw-semibold text-success">+117.50</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+      
+      <div class="tab-pane fade" id="sub-wydatki-s1" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:560px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Opis</th><th>Kwota</th><th>Sezon</th></tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>2026/03/18</td>
+              <td>boisko - Syrenka</td>
+              <td>885.01 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/03/08</td>
+              <td>czekolada dla króla strzelców</td>
+              <td>8.00 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/02/23</td>
+              <td>boisko - Syrenka</td>
+              <td>1770.02 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/01/28</td>
+              <td>boisko - Syrenka</td>
+              <td>977.26 PLN</td>
+              <td class="text-muted small">Zima 2026</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
     </div>
-
-    <table class="table table-sm table-bordered bg-white" style="max-width:680px">
-      <thead class="table-dark">
-        <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
-      </thead>
-      <tbody>
-        
-        
-        <tr>
-          <td>
-            <a href="games/8" class="text-decoration-none">2026/03/08</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">14</td>
-          <td>442.50</td>
-          <td>420</td>
-          <td class="fw-semibold text-danger">-22.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/7" class="text-decoration-none">2026/03/01</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>480</td>
-          <td class="fw-semibold text-success">+37.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/6" class="text-decoration-none">2026/02/22</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>485</td>
-          <td class="fw-semibold text-success">+42.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/5" class="text-decoration-none">2026/02/15</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/4" class="text-decoration-none">2026/02/08</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/3" class="text-decoration-none">2026/02/01</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr class="text-muted">
-          <td>
-            <a href="games/12" class="text-decoration-none">2026/01/25</a>
-            <span class="badge bg-secondary ms-1">Anulowany</span>
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">—</td>
-          <td>92.25</td>
-          <td>0</td>
-          <td class="fw-semibold text-danger">-92.25</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/2" class="text-decoration-none">2026/01/18</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/1" class="text-decoration-none">2026/01/11</a>
-            
-          </td>
-          <td class="text-muted small">Zima 2026</td>
-          <td class="text-muted">16</td>
-          <td>442.50</td>
-          <td>560</td>
-          <td class="fw-semibold text-success">+117.50</td>
-        </tr>
-        
-      </tbody>
-    </table>
-
   </div>
   
   
@@ -477,137 +639,207 @@
        id="fin-pane-s2"
        role="tabpanel">
 
-    <div class="row g-3 mb-4">
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Wynajem</div>
-            <div class="fs-5 fw-bold">1852.15 PLN</div>
+    <ul class="nav nav-pills mb-3" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="pill"
+                data-bs-target="#sub-salda-s2" type="button">Salda</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-platnosci-s2" type="button">Płatności</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="pill"
+                data-bs-target="#sub-wydatki-s2" type="button">Wydatki</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+
+      
+      <div class="tab-pane fade show active" id="sub-salda-s2" role="tabpanel">
+        <div class="row g-3 mb-4">
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Wynajem</div>
+                <div class="fs-5 fw-bold">2131.01 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Inne wydatki</div>
-            <div class="fs-5 fw-bold">0.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Inne wydatki</div>
+                <div class="fs-5 fw-bold">2440.41 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Zebrano</div>
-            <div class="fs-5 fw-bold">1425.00 PLN</div>
+          <div class="col-auto">
+            <div class="card text-center" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Zebrano</div>
+                <div class="fs-5 fw-bold">1770.00 PLN</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="card text-center border-2 border-danger" style="min-width:160px">
-          <div class="card-body py-2">
-            <div class="text-muted small">Bilans</div>
-            <div class="fs-5 fw-bold text-danger">
-              -427.15 PLN
+          <div class="col-auto">
+            <div class="card text-center border-2 border-danger" style="min-width:160px">
+              <div class="card-body py-2">
+                <div class="text-muted small">Bilans</div>
+                <div class="fs-5 fw-bold text-danger">
+                  -2801.42 PLN
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      
+      <div class="tab-pane fade" id="sub-platnosci-s2" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:680px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
+          </thead>
+          <tbody>
+            
+            
+            <tr>
+              <td>
+                <a href="games/16" class="text-decoration-none">2026/05/24</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">0</td>
+              <td>304.43</td>
+              <td>0</td>
+              <td class="fw-semibold text-danger">-304.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/15" class="text-decoration-none">2026/05/17</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>265</td>
+              <td class="fw-semibold text-danger">-39.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/14" class="text-decoration-none">2026/05/10</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">14</td>
+              <td>304.43</td>
+              <td>280</td>
+              <td class="fw-semibold text-danger">-24.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/13" class="text-decoration-none">2026/05/03</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">16</td>
+              <td>304.43</td>
+              <td>320</td>
+              <td class="fw-semibold text-success">+15.57</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/11" class="text-decoration-none">2026/04/26</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>300</td>
+              <td class="fw-semibold text-danger">-4.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/10" class="text-decoration-none">2026/04/19</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>300</td>
+              <td class="fw-semibold text-danger">-4.43</td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                <a href="games/9" class="text-decoration-none">2026/04/12</a>
+                
+              </td>
+              <td class="text-muted small">Wiosna 2026</td>
+              <td class="text-muted">15</td>
+              <td>304.43</td>
+              <td>305</td>
+              <td class="fw-semibold text-success">+0.57</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+      
+      <div class="tab-pane fade" id="sub-wydatki-s2" role="tabpanel">
+        <table class="table table-sm table-bordered bg-white" style="max-width:560px">
+          <thead class="table-dark">
+            <tr><th>Data</th><th>Opis</th><th>Kwota</th><th>Sezon</th></tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>2026/05/15</td>
+              <td>boisko - AWF</td>
+              <td>913.28 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/04/10</td>
+              <td>przelew Elixir</td>
+              <td>5.00 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+            <tr>
+              <td>2026/04/10</td>
+              <td>boisko - AWF</td>
+              <td>1522.13 PLN</td>
+              <td class="text-muted small">Wiosna 2026</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
     </div>
-
-    <table class="table table-sm table-bordered bg-white" style="max-width:680px">
-      <thead class="table-dark">
-        <tr><th>Data</th><th>Sezon</th><th>Zawodnicy</th><th>Wynajem</th><th>Zebrano</th><th>Bilans</th></tr>
-      </thead>
-      <tbody>
-        
-        
-        <tr>
-          <td>
-            <a href="games/15" class="text-decoration-none">2026/05/17</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">0</td>
-          <td>330.00</td>
-          <td>0</td>
-          <td class="fw-semibold text-danger">-330.00</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/14" class="text-decoration-none">2026/05/10</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">14</td>
-          <td>304.43</td>
-          <td>200</td>
-          <td class="fw-semibold text-danger">-104.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/13" class="text-decoration-none">2026/05/03</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">16</td>
-          <td>304.43</td>
-          <td>320</td>
-          <td class="fw-semibold text-success">+15.57</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/11" class="text-decoration-none">2026/04/26</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>300</td>
-          <td class="fw-semibold text-danger">-4.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/10" class="text-decoration-none">2026/04/19</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>300</td>
-          <td class="fw-semibold text-danger">-4.43</td>
-        </tr>
-        
-        
-        <tr>
-          <td>
-            <a href="games/9" class="text-decoration-none">2026/04/12</a>
-            
-          </td>
-          <td class="text-muted small">Wiosna 2026</td>
-          <td class="text-muted">15</td>
-          <td>304.43</td>
-          <td>305</td>
-          <td class="fw-semibold text-success">+0.57</td>
-        </tr>
-        
-      </tbody>
-    </table>
-
   </div>
   
 </div>
 
   </div>
   <footer class="container-fluid px-4 py-3 mt-5 border-top text-muted small">
-    Ostatnia aktualizacja: 14.05.2026
+    Ostatnia aktualizacja: 21.05.2026
   </footer>
 </body>
 </html>

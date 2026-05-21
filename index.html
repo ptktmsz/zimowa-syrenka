@@ -67,11 +67,11 @@
         <li>Składy są koedukacyjne — mamy w grupie i chłopaków, i dziewczyny.</li>
         <li>Jak nie ma w drużynie chętnego bramkarza, zmieniamy się na bramce co 5 minut.</li>
         <li>Proszę zgłaszać strzelców i asystentów po meczu — zbieramy statystyki.</li>
-        <li>bez wślizgów i kontaktu na 100%;</li>
-        <li>bez zadzierania nosa jak Ci ktoś nie poda;</li>
-        <li>nie komentujemy złych zagrań;</li>
-        <li>faule zgłaszają faulowani i nie dyskutujemy z tym — każda ręka to ręka;</li>
-        <li>zachęcam również do ograniczenia swojego wewnętrznego orlikowego Mourinho i nie dyrygowania innymi zawodnikami taktycznie w trakcie gry (wiem że sam jestem tego winny czasem, obiecuję nad sobą pracować).</li>
+        <li>Bez wślizgów i kontaktu na 100%.</li>
+        <li>Bez zadzierania nosa jak Ci ktoś nie poda.</li>
+        <li>Nie komentujemy złych zagrań.</li>
+        <li>Faule zgłaszają faulowani i nie dyskutujemy z tym — każda ręka to ręka.</li>
+        <li>Zachęcam również do ograniczenia swojego wewnętrznego orlikowego Mourinho i nie dyrygowania innymi zawodnikami taktycznie w trakcie gry (wiem że sam jestem tego winny czasem, obiecuję nad sobą pracować).</li>
       </ul>
     </div>
 
@@ -79,19 +79,59 @@
 
   <div class="col-lg-5">
     <div>
-      
-      <a href="games/15" class="text-decoration-none mb-3 d-block">
-        <div class="card px-4 py-3 border-success">
-          <div class="text-success small fw-semibold mb-1">Następny mecz</div>
-          <div class="fs-5 fw-bold">2026/05/17 &bull; 18:30</div>
-          <div class="text-muted small">AWF 5</div>
+      <div class="d-flex gap-2 align-items-stretch mb-3">
+        
+        <a href="games/16" class="text-decoration-none flex-fill" style="min-width:0">
+          <div class="card px-4 py-3 border-success h-100 d-flex flex-column justify-content-center">
+            <div class="text-success small fw-semibold mb-1">Następny mecz</div>
+            <div class="fs-5 fw-bold">2026/05/24 &bull; 18:30</div>
+            <div class="text-muted small">AWF 6</div>
+          </div>
+        </a>
+        
+
+        
+        <div class="card px-3 py-3 text-center flex-shrink-0" id="wx-card">
+          <div class="text-muted small fw-semibold mb-1">Pogoda</div>
+          <div id="wx-body"><span class="text-muted small">…</span></div>
         </div>
-      </a>
-      
+        <script>
+        (function(){
+          const lat="52.28713888888889", lon="20.96061111111111";
+          const date="2026-05-24";
+          const hour=parseInt("18:30".split(':')[0]);
+          const diff=Math.round((new Date(date)-new Date().setHours(0,0,0,0))/(864e5));
+          const el=document.getElementById('wx-body');
+          if(diff>16){el.innerHTML='<span class="text-muted" style="font-size:.7rem">Za wcześnie na prognozę</span>';return;}
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,precipitation_probability,weathercode,windspeed_10m&timezone=Europe%2FWarsaw&start_date=${date}&end_date=${date}`)
+            .then(r=>r.json()).then(d=>{
+              const i=d.hourly.time.findIndex(t=>t.endsWith(`T${String(hour).padStart(2,'0')}:00`));
+              const idx=i>=0?i:hour;
+              const temp=Math.round(d.hourly.temperature_2m[idx]);
+              const precip=d.hourly.precipitation_probability[idx];
+              const wind=Math.round(d.hourly.windspeed_10m[idx]);
+              const [icon,desc]=wmoDesc(d.hourly.weathercode[idx]);
+              el.innerHTML=`<div class="fs-2 lh-1">${icon}</div><div class="fw-bold">${temp}°C</div><div class="text-muted" style="font-size:.72rem">${desc}</div><div class="text-muted mt-1" style="font-size:.72rem">💧${precip}% · 💨${wind}km/h</div>`;
+            }).catch(()=>{el.innerHTML='<span class="text-muted small">—</span>';});
+          function wmoDesc(c){
+            if(c===0)return['☀️','Bezchmurnie'];
+            if(c<=3)return['⛅','Częściowe zachmurzenie'];
+            if(c<=48)return['🌫️','Mgła'];
+            if(c<=55)return['🌦️','Mżawka'];
+            if(c<=65)return['🌧️','Deszcz'];
+            if(c<=77)return['❄️','Śnieg'];
+            if(c<=82)return['🌦️','Przelotny deszcz'];
+            if(c<=86)return['🌨️','Przelotny śnieg'];
+            return['⛈️','Burza'];
+          }
+        })();
+        </script>
+        
+      </div>
 
       <div class="d-flex gap-2 mb-3">
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">41</div>
+          <div class="fs-2 fw-bold">43</div>
           <div class="text-muted small">Zawodnicy</div>
         </div>
         <div class="card text-center py-3 flex-fill">
@@ -99,7 +139,7 @@
           <div class="text-muted small">Mecze</div>
         </div>
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">176</div>
+          <div class="fs-2 fw-bold">185</div>
           <div class="text-muted small">Bramki</div>
         </div>
         <div class="card text-center py-3 flex-fill">
@@ -108,7 +148,9 @@
         </div>
       </div>
 
-      <img src="/static/awf6.jpeg" alt="Mapa dojazdu" class="img-fluid rounded w-100">
+      
+      <img src="static/awf6.jpeg" alt="Mapa dojazdu" class="img-fluid rounded w-100">
+      
     </div>
   </div>
 
@@ -116,7 +158,7 @@
 
   </div>
   <footer class="container-fluid px-4 py-3 mt-5 border-top text-muted small">
-    Ostatnia aktualizacja: 14.05.2026
+    Ostatnia aktualizacja: 21.05.2026
   </footer>
 </body>
 </html>

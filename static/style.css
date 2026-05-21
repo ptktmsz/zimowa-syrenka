@@ -5,3 +5,12 @@ body { background: #f8f9fa; }
 .matrix-col-header { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; padding: 8px 2px; vertical-align: bottom; font-weight: normal; font-size: 0.75rem; }
 .matrix-diag { background: #dee2e6; }
 .matrix-cell { text-align: center; font-size: 0.8rem; min-width: 2rem; }
+
+/* payment matrix */
+.pay-sticky       { position: sticky; left: 0; background: #fff; z-index: 2; }
+.pay-sticky-dark  { position: sticky; left: 0; background: #343a40; z-index: 2; }
+.pay-sticky-light { position: sticky; left: 0; background: #e9ecef; z-index: 2; }
+.pay-ok    { background-color: #d1e7dd; color: #0a3622; }
+.pay-bad   { background-color: #f8d7da; color: #58151c; }
+.pay-empty { background-color: #f8f9fa; }
+.pay-legend { display: inline-block; width: 18px; height: 14px; border: 1px solid #ccc; vertical-align: middle; margin-right: 4px; }
