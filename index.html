@@ -28,10 +28,10 @@
     <div>
       <div class="d-flex gap-2 align-items-stretch mb-3">
         
-        <a href="games/19" class="text-decoration-none flex-fill" style="min-width:0">
+        <a href="games/20" class="text-decoration-none flex-fill" style="min-width:0">
           <div class="card px-4 py-3 border-success h-100 d-flex flex-column justify-content-center">
             <div class="text-success small fw-semibold mb-1">Następny mecz</div>
-            <div class="fs-5 fw-bold">2026/06/13 &bull; 18:30</div>
+            <div class="fs-5 fw-bold">2026/06/21 &bull; 18:00</div>
             <div class="text-muted small">AWF 4</div>
           </div>
         </a>
@@ -45,8 +45,8 @@
         <script>
         (function(){
           const lat="52.2871", lon="20.9606";
-          const date="2026-06-13";
-          const hour=parseInt("18:30".split(':')[0]);
+          const date="2026-06-21";
+          const hour=parseInt("18:00".split(':')[0]);
           const diff=Math.round((new Date(date)-new Date().setHours(0,0,0,0))/(864e5));
           const el=document.getElementById('wx-body');
           if(diff>16){el.innerHTML='<span class="text-muted" style="font-size:.7rem">Za wcześnie na prognozę</span>';return;}
@@ -78,15 +78,15 @@
 
       <div class="d-flex gap-2 mb-3">
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">46</div>
+          <div class="fs-2 fw-bold">48</div>
           <div class="text-muted small">Zawodnicy</div>
         </div>
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">17</div>
+          <div class="fs-2 fw-bold">18</div>
           <div class="text-muted small">Mecze</div>
         </div>
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">218</div>
+          <div class="fs-2 fw-bold">224</div>
           <div class="text-muted small">Bramki</div>
         </div>
         <div class="card text-center py-3 flex-fill">
@@ -156,7 +156,7 @@
 
   </div>
   <footer class="container-fluid px-4 py-3 mt-5 border-top text-muted small">
-    Ostatnia aktualizacja: 10.06.2026
+    Ostatnia aktualizacja: 14.06.2026
   </footer>
 </body>
 </html>
