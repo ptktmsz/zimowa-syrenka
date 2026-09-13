@@ -28,12 +28,51 @@
     <div>
       <div class="d-flex gap-2 align-items-stretch mb-3">
         
-        <div class="card px-4 py-3 border-secondary flex-fill" style="min-width:0">
-          <div class="text-muted small fw-semibold mb-1">Następny mecz</div>
-          <div class="text-muted">—</div>
-        </div>
+        <a href="games/22" class="text-decoration-none flex-fill" style="min-width:0">
+          <div class="card px-4 py-3 border-success h-100 d-flex flex-column justify-content-center">
+            <div class="text-success small fw-semibold mb-1">Następny mecz</div>
+            <div class="fs-5 fw-bold">2026/09/20 &bull; 18:15</div>
+            <div class="text-muted small">Spokojna</div>
+          </div>
+        </a>
         
 
+        
+        <div class="card px-3 py-3 text-center flex-shrink-0" id="wx-card">
+          <div class="text-muted small fw-semibold mb-1">Pogoda</div>
+          <div id="wx-body"><span class="text-muted small">…</span></div>
+        </div>
+        <script>
+        (function(){
+          const lat="52.2513", lon="20.9764";
+          const date="2026-09-20";
+          const hour=parseInt("18:15".split(':')[0]);
+          const diff=Math.round((new Date(date)-new Date().setHours(0,0,0,0))/(864e5));
+          const el=document.getElementById('wx-body');
+          if(diff>16){el.innerHTML='<span class="text-muted" style="font-size:.7rem">Za wcześnie na prognozę</span>';return;}
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,precipitation_probability,weathercode,windspeed_10m&timezone=Europe%2FWarsaw&start_date=${date}&end_date=${date}`)
+            .then(r=>r.json()).then(d=>{
+              const i=d.hourly.time.findIndex(t=>t.endsWith(`T${String(hour).padStart(2,'0')}:00`));
+              const idx=i>=0?i:hour;
+              const temp=Math.round(d.hourly.temperature_2m[idx]);
+              const precip=d.hourly.precipitation_probability[idx];
+              const wind=Math.round(d.hourly.windspeed_10m[idx]);
+              const [icon,desc]=wmoDesc(d.hourly.weathercode[idx]);
+              el.innerHTML=`<div class="fs-2 lh-1">${icon}</div><div class="fw-bold">${temp}°C</div><div class="text-muted" style="font-size:.72rem">${desc}</div><div class="text-muted mt-1" style="font-size:.72rem">💧${precip}% · 💨${wind}km/h</div>`;
+            }).catch(()=>{el.innerHTML='<span class="text-muted small">—</span>';});
+          function wmoDesc(c){
+            if(c===0)return['☀️','Bezchmurnie'];
+            if(c<=3)return['⛅','Częściowe zachmurzenie'];
+            if(c<=48)return['🌫️','Mgła'];
+            if(c<=55)return['🌦️','Mżawka'];
+            if(c<=65)return['🌧️','Deszcz'];
+            if(c<=77)return['❄️','Śnieg'];
+            if(c<=82)return['🌦️','Przelotny deszcz'];
+            if(c<=86)return['🌨️','Przelotny śnieg'];
+            return['⛈️','Burza'];
+          }
+        })();
+        </script>
         
       </div>
 
@@ -51,11 +90,19 @@
           <div class="text-muted small">Bramki</div>
         </div>
         <div class="card text-center py-3 flex-fill">
-          <div class="fs-2 fw-bold">2</div>
+          <div class="fs-2 fw-bold">3</div>
           <div class="text-muted small">Sezony</div>
         </div>
       </div>
 
+      
+      <img src="static/spokojna.jpeg" alt="Mapa dojazdu" class="img-fluid rounded w-100">
+      
+      
+      <a href="https://www.google.com/maps/search/?api=1&query=52.2513,20.9764"
+         target="_blank" rel="noopener" class="btn btn-outline-secondary w-100 mt-2">
+        <i class="bi bi-geo-alt"></i> Otwórz w Google Maps
+      </a>
       
     </div>
   </div>
@@ -69,19 +116,19 @@
         <li>W piątek publikuję listę grających. Jeśli chętnych jest więcej niż 16, wybór odbywa się według poniższych zasad:
           <ol class="mt-1" style="line-height:2">
             <li><strong>Bramkarze</strong> — do 2 miejsc zarezerwowanych dla bramkarzy (według kolejności głosowania).</li>
-            <li><strong>Mało meczów</strong> — 4 miejsca dla zawodników z najmniejszą liczbą meczów w bieżącym sezonie (przy remisie decyduje wcześniejszy głos).</li>
             <li><strong>Kolejka</strong> — pozostałe miejsca według kolejności głosowania.</li>
           </ol>
         </li>
         <li>Osoby z nieuregulowanymi zaległościami finansowymi nie są brane pod uwagę przy wyborze składu.</li>
-        <li>W niedzielę rano wysyłam podział na drużyny.</li>
+        <li>W niedzielę rano wysyłam podział na drużyny, razem z kolorem koszulki, którą należy wziąć (pomarańczowi mają znaczniki).</li>
+        <li>Zrezygnować z gry można do godziny 12:00 w niedzielę. Jeśli zrezygnujesz po tej godzinie i nikt nie znajdzie się na wolne miejsce, wtedy proszę o wpłatę jak za normalną grę.</li>
       </ul>
     </div>
 
     <div class="card p-4">
       <h5 class="mb-3">Płatności</h5>
       <ul class="mb-0" style="line-height:2">
-        <li>20 PLN za grę.</li>
+        <li>25 PLN za grę.</li>
         <li>Blik na numer <strong>500 283 399</strong> albo przelew na konto <strong>78 1140 2004 0000 3702 4762 3029</strong>.</li>
       </ul>
     </div>
@@ -90,6 +137,7 @@
       <h5 class="mb-3">Sprzęt</h5>
       <ul class="mb-0" style="line-height:2">
         <li>Jak ktoś ma piłkę, warto wziąć — ja też będę miał swoją piłkę i pompkę.</li>
+        <li>Gramy na sztucznej nawierzchni orlikowej, najlepsze są tam turfy.</li>
         <li>Mamy znaczniki.</li>
       </ul>
     </div>
@@ -99,8 +147,9 @@
       <p class="mb-3">Przede wszystkim <strong>MA BYĆ MIŁO</strong> — te zasady obowiązują cały czas. Czyli:</p>
       <ul class="mb-0" style="line-height:2">
         <li>Mecz trwa dwie połowy po 40 minut.</li>
-        <li>Gramy po 7 osób (6 + bramkarz), jedna osoba na zmianę jeśli jest nas więcej niż 14.</li>
+        <li>Gramy po 8 osób (7 + bramkarz).</li>
         <li>Składy są koedukacyjne — mamy w grupie i chłopaków, i dziewczyny.</li>
+        <li>Rzuty z autu wykonujemy z ręki.</li>
         <li>Jak nie ma w drużynie chętnego bramkarza, zmieniamy się na bramce co 5 minut.</li>
         <li>Proszę zgłaszać strzelców i asystentów po meczu — zbieramy statystyki.</li>
         <li>Bez wślizgów i kontaktu na 100%.</li>
@@ -117,7 +166,7 @@
 
   </div>
   <footer class="container-fluid px-4 py-3 mt-5 border-top text-muted small">
-    Ostatnia aktualizacja: 28.06.2026
+    Ostatnia aktualizacja: 13.09.2026
   </footer>
 </body>
 </html>
