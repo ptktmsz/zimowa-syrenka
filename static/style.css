@@ -1,14 +1,69 @@
-body { background: #f8f9fa; }
+/* ── Base ─────────────────────────────────────────────────────────────── */
+:root {
+  --sy-bg: #f3f5f8;
+  --sy-ink: #1f2937;
+  --sy-head: #1f2a37;
+  --sy-accent: #fd7e14;
+  --sy-border: #e3e7ee;
+  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+body { background: var(--sy-bg); color: var(--sy-ink); }
+h3, h4, h5 { font-weight: 650; letter-spacing: -0.01em; }
+a { color: #0b5ed7; }
+
+/* navbar */
+.navbar.bg-dark { background: var(--sy-head) !important; border-bottom: 3px solid var(--sy-accent); }
+.navbar .nav-link.active, .navbar .dropdown-toggle.active { color: #fff !important; }
+.navbar .nav-link.active::after { content: none; }
+.navbar-brand { letter-spacing: -0.01em; }
+
+/* cards & tables */
+.card { border: 1px solid var(--sy-border); border-radius: 10px; box-shadow: 0 1px 2px rgba(16, 24, 40, .04); }
+.table { border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(16, 24, 40, .04); }
+.table > :not(caption) > * > * { border-color: var(--sy-border); }
+.table thead.table-dark th, .table thead .table-dark th, .table-dark > th {
+  background: var(--sy-head); border-color: #2d3a4b; font-weight: 600; font-size: .85em;
+}
 .table td, .table th { vertical-align: middle; }
+.table-hover > tbody > tr:hover > * { --bs-table-bg-state: #f6f8fb; }
+
 .btn-icon { padding: 0.15rem 0.4rem; font-size: 0.8rem; }
 .editing-row td { background: #fffde7; }
+
+/* ── Domain bits ─────────────────────────────────────────────────────── */
+.team-badge { font-weight: 600; letter-spacing: .02em; padding: .35em .6em; }
+.stars, .table .stars { color: #f0ad00; letter-spacing: .05em; white-space: nowrap; }
+
+.pos-badge { font-weight: 600; }
+.pos-bramkarz  { background: #0d6efd; color: #fff; }
+.pos-pole      { background: #6c757d; color: #fff; }
+.pos-obronca   { background: #6f42c1; color: #fff; }
+.pos-pomocnik  { background: #20c997; color: #08372b; }
+.pos-napastnik { background: #dc3545; color: #fff; }
+
+.score-card { min-width: 300px; max-width: 420px; }
+.score-num { font-size: 2.2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.stat-tile .card-body { padding: .8rem 1rem; }
+.stat-label { font-size: .75rem; color: #6b7280; text-transform: uppercase; letter-spacing: .04em; }
+.stat-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.result-pill { display: inline-block; width: 1.5em; text-align: center; border-radius: 4px; font-weight: 700; font-size: .8em; color: #fff; }
+.result-w { background: #198754; }
+.result-r { background: #6c757d; }
+.result-p { background: #dc3545; }
+
+.season-picker .btn { border-radius: 999px !important; margin-right: 4px; }
+.season-picker .btn-group { flex-wrap: wrap; }
+
+/* co-play matrix */
 .matrix-col-header { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; padding: 8px 2px; vertical-align: bottom; font-weight: normal; font-size: 0.75rem; }
 .matrix-diag { background: #dee2e6; }
 .matrix-cell { text-align: center; font-size: 0.8rem; min-width: 2rem; }
 
 /* payment matrix */
 .pay-sticky       { position: sticky; left: 0; background: #fff; z-index: 2; }
-.pay-sticky-dark  { position: sticky; left: 0; background: #343a40; z-index: 2; }
+.pay-sticky-dark  { position: sticky; left: 0; background: var(--sy-head); z-index: 2; }
 .pay-sticky-light { position: sticky; left: 0; background: #e9ecef; z-index: 2; }
 .pay-ok    { background-color: #d1e7dd; color: #0a3622; }
 .pay-bad   { background-color: #f8d7da; color: #58151c; }
